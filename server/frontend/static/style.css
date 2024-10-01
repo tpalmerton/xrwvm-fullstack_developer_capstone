@@ -41,6 +41,15 @@ img{
   padding:5px;
 }
 
+.title2{
+  font-size: 20px;
+  background-color:white;
+  color: rgb(97, 64, 128);
+  text-align: center;
+  margin:20px;
+  padding:5px;
+}
+
 .homepage_links{
   color:  rgb(97, 64, 128);
   padding: 25%;
