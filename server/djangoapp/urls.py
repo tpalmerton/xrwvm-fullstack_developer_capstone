@@ -10,6 +10,10 @@ urlpatterns = [
 
     # path for login
     path(route='login', view=views.login_user, name='login'),
+    # Path for logout
+     path('logout/', views.logout_request, name='logout'),
+    # path for registration
+    path(route="register", view=views.registration, name="register"),
     path(route='get_cars', view=views.get_cars, name ='getcars'),
     path(route='get_dealers/', view=views.get_dealerships, name='get_dealers'),
     path(route='get_dealers/<str:state>', view=views.get_dealerships, name='get_dealers_by_state'),
