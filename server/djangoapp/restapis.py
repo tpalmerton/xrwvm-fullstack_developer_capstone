@@ -31,6 +31,7 @@ def get_request(endpoint, **kwargs):
 
 # Add code for get requests to back end
 
+
 def analyze_review_sentiments(text):
     request_url = sentiment_analyzer_url+"analyze/"+text
     try:
@@ -43,11 +44,12 @@ def analyze_review_sentiments(text):
 
 # Add code for retrieving sentiments
 
+
 def post_review(data_dict):
-    request_url = backend_url+"/insert_review"
+    request_url = backend_url + "/insert_review"
     try:
-        response = requests.post(request_url,json=data_dict)
+        response = requests.post(request_url, json=data_dict)
         print(response.json())
         return response.json()
-    except:
+    except requests.exceptions.RequestException:
         print("Network exception occurred")
